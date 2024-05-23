@@ -1,0 +1,226 @@
+:root {
+  /* Primary */
+  --blue: hsl(246, 80%, 60%);
+  --light-red-work: hsl(15, 100%, 70%);
+  --soft-blue-play: hsl(195, 74%, 62%);
+  --light-red-study: hsl(348, 100%, 68%);
+  --lime-green-exercise: hsl(145, 58%, 55%);
+  --violet-social: hsl(264, 64%, 52%);
+  --soft-orange-self-care: hsl(43, 84%, 65%);
+
+  /* Neutral */
+  --very-dark-blue: hsl(226, 43%, 10%);
+  --dark-blue: hsl(235, 46%, 20%);
+  --desaturated-blue: hsl(235, 45%, 61%);
+  --pale-blue: hsl(236, 100%, 87%);
+
+  /* BORDER */
+  --radius: 1rem;
+}
+
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1, h2, h3, h4,
+button, input, label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1, h2,
+h3, h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input, button,
+textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0;
+  height: 100vh;
+  font-family: 'Rubik';
+  background-color: var(--very-dark-blue);
+}
+.cards-grid {
+  display: grid;
+  gap:2rem;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 40px;
+  min-width: 62em;
+}
+
+.grid-row-span-two {
+  grid-row: span 2;
+}
+.card {
+  background: var(--dark-blue);
+  border-radius: 10px;
+  padding: 20px;
+  position: relative;
+  color: white;
+  margin-top: 2rem;
+}
+
+h1 {
+  font-size: 14px;
+  font-weight: 400;
+  padding: 2rem;
+
+  span {
+    font-size: 32px;
+    display: block;
+    font-weight: 400;
+  }
+}
+
+.card > div >img {
+  width: 35%;
+  /* justify-items: end; */
+  height: auto;
+  display: flex;
+  background-size: contain;
+}
+
+.category-underlay {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+
+.hours {
+  font-size: 2.5rem;
+}
+section {
+  position: relative;
+  background-color: aqua;
+}
+
+.category-underlay {
+  border-radius: var(--radius);
+  position: absolute;
+  top: -2.3rem;
+  right: 0;
+  width: 100%;
+  height: 100px;
+  z-index: -1;
+}
+
+.work-underlay {
+  background-color: var(--light-red-work);
+}
+.play-underlay{
+  background-color: var(--soft-blue-play);
+}
+
+.study-underlay {
+  background-color: var(--light-red-study);
+}
+
+.exercise-underlay {
+  background-color: var(--lime-green-exercise);
+}
+
+.social-underlay {
+  background-color: var(--desaturated-blue);
+}
+
+.care-underlay {
+  background-color: var(--soft-orange-self-care);
+}
+
+.profile-overlay {
+  background-color: var(--violet-social);
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: -2.4rem;
+  height: 17rem;
+  border-radius: var(--radius);
+}
+
+.profile-undercard {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: start;
+  padding-left: 2rem;
+}
+
+.profile-undercard p {
+  padding-block: 0.4rem
+}
+
+.profile-img {
+  margin: 2rem 2rem 0 2rem;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
