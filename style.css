@@ -96,6 +96,11 @@ body {
   font-family: 'Rubik';
   background-color: var(--very-dark-blue);
 }
+
+h2 {
+  font-size: medium;
+  font-weight: normal;
+}
 .cards-grid {
   display: grid;
   gap:1.5rem;
@@ -129,7 +134,7 @@ h1 {
 }
 
 .card > div >img {
-  width: 35%;
+  width: 65px;
   height: auto;
   display: flex;
   background-size: contain;
